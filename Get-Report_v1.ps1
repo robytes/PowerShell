@@ -17,7 +17,7 @@ $secureStringPwd = $Pass | ConvertTo-SecureString -AsPlainText -Force
 $secureStringText = $secureStringPwd | ConvertFrom-SecureString
 Set-Content ".\ExportedPwd.txt" $secureStringText
 
-$userName = "docusignhq\robert.mullen"
+$userName = "<entery domain\user>"
 $pwdTxt = Get-Content ".\ExportedPwd.txt"
 $securePWD = $pwdtxt | ConvertTo-SecureString
 $cred = New-Object System.Management.Automation.PSCredential($username,$securePwd)
